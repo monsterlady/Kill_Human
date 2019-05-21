@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name=".Mainapplication">
+        android:name="com.example.kill_human.Mainapplication">
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.kill_human.MainActivity"
             android:screenOrientation="landscape"
             >
 

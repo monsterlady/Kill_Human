@@ -31,6 +31,7 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback,Run
     private long primitiveStratTime;
     private boolean isJumpping;
     private Random random = new Random();
+    private static final int RESPAWNAREAWIDTH = 100;
 
     public GamePanel(Context context)
     {
@@ -151,10 +152,10 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback,Run
                 //add the first primitive
                 if (primitives.size() == 0) {
                     primitives.add(new Primitive(BitmapFactory.decodeResource(getResources(), R.drawable.dancers), 0, INITHEIGHTFORPRIMITIVE, 32, 33, trex.getScore(), 3));
-                } else if(primitives.size() < 15) {
-                    primitives.add(new Primitive(BitmapFactory.decodeResource(getResources(), R.drawable.dancers), (int) (random.nextDouble() * (100)),INITHEIGHTFORPRIMITIVE, 32, 33, trex.getScore(), 3));
-                    primitives.add(new Primitive(BitmapFactory.decodeResource(getResources(), R.drawable.dancers2), (int) (random.nextDouble() * (100)),INITHEIGHTFORPRIMITIVE, 32, 33, trex.getScore(), 3));
-                    primitives.add(new Primitive(BitmapFactory.decodeResource(getResources(), R.drawable.dancers3), (int) (random.nextDouble() * (100)),INITHEIGHTFORPRIMITIVE, 32, 33, trex.getScore(), 3));
+                } else if(primitives.size() < 5) {
+                    primitives.add(new Primitive(BitmapFactory.decodeResource(getResources(), R.drawable.dancers), (int) (random.nextDouble() * (RESPAWNAREAWIDTH)),INITHEIGHTFORPRIMITIVE, 32, 33, trex.getScore(), 3));
+                    primitives.add(new Primitive(BitmapFactory.decodeResource(getResources(), R.drawable.dancers2), (int) (random.nextDouble() * (RESPAWNAREAWIDTH)),INITHEIGHTFORPRIMITIVE, 32, 33, trex.getScore(), 3));
+                    primitives.add(new Primitive(BitmapFactory.decodeResource(getResources(), R.drawable.dancers3), (int) (random.nextDouble() * (RESPAWNAREAWIDTH)),INITHEIGHTFORPRIMITIVE, 32, 33, trex.getScore(), 3));
                 }
 
                 //reset timer

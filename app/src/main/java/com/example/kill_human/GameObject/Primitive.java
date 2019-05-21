@@ -26,10 +26,10 @@ public class Primitive extends GameObject {
         width = w;
         height = h;
         score = s;
-        speed = 1 + (int) (random.nextDouble()*score/30);
+        speed = 1 + (int) (random.nextDouble()*score/50);
 
         //cap missile speed
-        if(speed>5)speed = 5;
+        if(speed>10)speed = 10;
 
         Bitmap[] image = new Bitmap[numFrames];
 
